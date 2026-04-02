@@ -1,46 +1,67 @@
-# 🚗 Used Car Price Analysis (Craigslist Dataset)
+# Used Cars Data Analysis Pipeline 🚗📊
+**Student Capstone Project | ML Foundations Bootcamp**
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Pandas](https://img.shields.io/badge/Library-Pandas-orange.svg)
 ![Matplotlib](https://img.shields.io/badge/Library-Matplotlib-green.svg)
 
+
 ## 📝 Project Overview
-This project aims to analyze a massive dataset of used cars from Craigslist to understand the factors influencing vehicle prices. The analysis covers the entire data science pipeline, from cleaning and preprocessing to feature engineering and exploratory data analysis (EDA).
-
-## 📂 Project Structure
-* `01_data_cleaning.ipynb`: Handling missing values, outliers, and duplicates.
-* `02_feature_engineering.ipynb`: Creating new features like "Car Age".
-* `03_eda_visualization.ipynb`: Visualizing price distributions and correlations.
-* `04_math_operations.ipynb`: Statistical calculations and numerical analysis.
-* `report.md`: Detailed documentation of the project.
-
-## 🛠️ Data Pipeline & Methodology
-
-### 1. Data Cleaning
-* Removed rows with missing critical values (Price, Mileage).
-* Filtered out unrealistic data, such as zero-priced cars or impossible mileage.
-* Ensured correct data types for mathematical operations.
-* Deleted duplicate records to ensure model integrity.
-
-### 2. Feature Engineering
-* **Car Age Calculation:** Derived by subtracting the manufacture year from the current year (2026) to better understand depreciation.
-
-### 3. Exploratory Data Analysis (EDA)
-* **Price Distribution:** Used histograms to identify that most cars fall within the average price range.
-* **Correlation Analysis:** Used scatter plots to confirm that higher mileage and older age directly lead to lower prices.
-
-## 📊 Key Findings
-* **Age vs. Price:** Newer cars consistently command higher prices.
-* **Mileage Impact:** Increased kilometers traveled is a primary factor in price reduction.
-* **Brand Value:** Certain manufacturers retain their resale value better than others over time.
-
-## 🚀 Future Work
-* Incorporate more features like car color and demand trends.
-* Build a Machine Learning model to predict car prices based on input characteristics.
-* Add detailed condition metrics (engine modifications, paint status, etc.).
-
-## 🔗 Data Source
-The data used in this project is sourced from [Kaggle - Craigslist Cars/Trucks Data](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data).
+In this project, I built a data analysis pipeline for used cars. I moved from raw, messy data to a clean dataset, created new features, and built a visual dashboard to find the best car deals.
 
 ---
-*Created as part of a Final Data Analysis Project.*
+
+## 📂 Project Structure
+- **`01_cleaning.ipynb`**: Loading and cleaning the data (Phase 1).
+- **`02_features.ipynb`**: Creating new features and scaling data (Phase 2).
+- **`03_eda.ipynb`**: Visualizing data and building the **Bonus Dashboard** (Phase 3).
+- **`04_math.ipynb`**: Manual math calculations using NumPy (Phase 4).
+- **`data/`**: Folder for raw and cleaned CSV files.
+- **`report.pdf`**: Final 2-page written report.
+- **`requirements.txt`**: List of Python libraries used.
+
+---
+
+## 🚀 Pipeline Phases
+
+### Phase 1: Cleaning
+- Removed missing values and duplicates.
+- Fixed data types (Year to **int**, Odometer to **float**).
+- Removed outliers (prices < $500 and above the 99th percentile).
+- **Result:** Clean dataset with **128,752** rows.
+
+### Phase 2: Feature Engineering
+- Created **Car Age** and **Mileage per Year**.
+- Applied **Ordinal Encoding** to the car condition.
+- Applied **One-Hot Encoding** to fuel and transmission types.
+- Used **StandardScaler** to normalize mileage and age.
+- Applied **Log Transformation** to the price for better distribution.
+
+### Phase 3: Visual Analysis 
+- Created a **4-Chart Dashboard** in one figure.
+- Analyzed price distribution, mileage impact, and brand performance.
+- Used a **Correlation Heatmap** to find the strongest price predictors.
+
+### Phase 4: Math Basics
+- Calculated Mean and Standard Deviation **manually** using NumPy.
+- Calculated **Cosine Similarity** between high-value and low-value cars.
+- Estimated the **Probability** of finding expensive cars (> $50,000).
+
+---
+
+## 📈 Key Findings
+- **Age is King:** Car age is the most significant factor affecting price.
+- **Condition vs. Mileage:** A car in "Excellent" condition can hold more value than a newer car with lower mileage.
+- **Brand Value:** Manufacturers like Toyota and Ford show stronger price retention over time.
+
+---
+
+## - **Kaggle Link:** [Used Cars Dataset](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data)
+
+---
+
+## 👤 Author
+- **Raeed Alotaibi** - https://github.com/tuwra
+
+---
+*This project was completed as part of the ML Foundations Bootcamp in Tuwaiq Academy.*
