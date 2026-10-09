@@ -12,12 +12,12 @@ In this project, I built a data analysis pipeline for used cars. I moved from ra
 ---
 
 ## 📂 Project Structure
-- **`01_cleaning.ipynb`**: Loading and cleaning the data (Phase 1).
-- **`02_features.ipynb`**: Creating new features and scaling data (Phase 2).
-- **`03_eda.ipynb`**: Visualizing data and building the **Bonus Dashboard** (Phase 3).
-- **`04_math.ipynb`**: Manual math calculations using NumPy (Phase 4).
-- **`data/`**: Folder for raw and cleaned CSV files.
-- **`report.pdf`**: Final 2-page written report.
+- **`Jupyter_Notebooks/01_cleaning.ipynb`**: Loading and cleaning the data (Phase 1).
+- **`Jupyter_Notebooks/02_features.ipynb`**: Creating new features and scaling data (Phase 2).
+- **`Jupyter_Notebooks/03_eda.ipynb`**: Visualizing data and building the **Bonus Dashboard** (Phase 3).
+- **`Jupyter_Notebooks/04_math.ipynb`**: Manual math calculations using NumPy (Phase 4).
+- **`cleaned/`**: The cleaned dataset (`cars_cleaned.csv`) and the engineered features (`cars_features.csv`).
+- **`Final_Project_Report.pdf`**: Final 2-page written report.
 - **`requirements.txt`**: List of Python libraries used.
 
 ---
@@ -56,7 +56,9 @@ In this project, I built a data analysis pipeline for used cars. I moved from ra
 
 ---
 
-## - **Kaggle Link:** [Used Cars Dataset](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data)
+## 📥 Dataset
+- **Kaggle Link:** [Used Cars Dataset](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data)
+- The raw file (`vehicles.csv`) is too large for GitHub. To run the notebooks, download it and place it at `Jupyter_Notebooks/Data/raw/vehicles.csv`.
 
 ---
 
